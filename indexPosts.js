@@ -36,8 +36,8 @@ async function updateIndex() {
                     ...parsed.attributes,
                     objectID: file.split('.').slice(0, -1).join('.'),
                     "body": parsed.body,
-                    "url": `${process.env.VERCEL_URL}/posts/${file.split('.').slice(0, -1).join('.')}`,
-                    "ogImage": `${process.env.VERCEL_URL}${parsed.attributes.ogImage}`,
+                    "url": `https://${process.env.VERCEL_URL}/posts/${file.split('.').slice(0, -1).join('.')}`,
+                    "ogImage": `https://${process.env.VERCEL_URL}${parsed.attributes.ogImage.url}`,
                 }
 
                 // adds the post to the array of posts
